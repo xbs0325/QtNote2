@@ -44,7 +44,7 @@ QMessage窗口
 
 `QMessageBox::question(QWidget *parent, const QString &title, const QString &text, QMessageBox::StandardButtons buttons = StandardButtons(Yes | No), QMessageBox::StandardButton defaultButton = NoButton)`
 
-第一个参数parent 第二个参数标题文本 第三个参数中心文本 第四个参数按钮 第五个默认高亮按钮
+第一个参数parent 第二个参数标题文本 第三个参数主要内容 第四个参数按钮 第五个默认关联按钮
 
 例如:
 `QMessageBox::question(this,"question","是否保存",QMessageBox::Save|QMessageBox::Cancel,QMessageBox::Cancel);`
