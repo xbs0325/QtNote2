@@ -30,3 +30,25 @@ Qt笔记02
 设置自动释放空间
 
 `dlg2->setAtrribute(Qt::WA_DeleteOnClose)`
+
+# 标准对话框
+
+## 消息对话框
+QMessage窗口
+
+`QMessageBox::information(QWidget *parent, const QString &title, const QString &text, QMessageBox::StandardButtons buttons = Ok, QMessageBox::StandardButton defaultButton = NoButton)`
+
+`QMessageBox::warning(QWidget *parent, const QString &title, const QString &text, QMessageBox::StandardButtons buttons = Ok, QMessageBox::StandardButton defaultButton = NoButton)`
+
+`QMessageBox::critical(QWidget *parent, const QString &title, const QString &text, QMessageBox::StandardButtons buttons = Ok, QMessageBox::StandardButton defaultButton = NoButton)`
+
+`QMessageBox::question(QWidget *parent, const QString &title, const QString &text, QMessageBox::StandardButtons buttons = StandardButtons(Yes | No), QMessageBox::StandardButton defaultButton = NoButton)`
+
+第一个参数parent 第二个参数标题文本 第三个参数中心文本 第四个参数按钮 第五个默认高亮按钮
+
+例如:
+`QMessageBox::question(this,"question","是否保存",QMessageBox::Save|QMessageBox::Cancel,QMessageBox::Cancel);`
+
+如何捕捉用户选项？
+->返回值为QMessageBox::StandardButton类型
+对返回值进行判断
